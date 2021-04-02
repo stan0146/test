@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,9 +40,3 @@
     </div>
     <main class="mdl-layout__content">
         <div class="page-content">
-      </main>
-  </div>  
-
-</body>
-
-</html>
