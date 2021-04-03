@@ -1,95 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <title>Swarm</title>
-</head>
-
-<body>
-    <!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Swarm</span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only" >
-          <a class="mdl-navigation__link" href="">Log in or register</a>
-        </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Swarm</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Profile</a>
-        <a class="mdl-navigation__link" href="">All events</a>
-        <a class="mdl-navigation__link" href="">Create new event</a>
-        <a class="mdl-navigation__link" href="">Log in/Register</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </main>
-  </div>
-</body>
-
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <link rel="stylesheet" href="try.css">
-    <title>Home page </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="table.css">
+      
 </head>
 <body>
-<!-- Always shows a header, even in smaller screens. (FIXED HEADER) -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">
-            <a class="mdl-navigation__link" href="home.html"><h3>Swarmm</h3></a>
-        </span>
-        <!-- Add spacer, to align navigation to the right -->
-        <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-        <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="profile.html">Profile</a>
-            <a class="mdl-navigation__link" href="allEvents.html">All events</a>
-            <a class="mdl-navigation__link" href="createEvent.html">Create new event</a>
-            <a class="mdl-navigation__link" href="login.html">Log in/Register</a>
-          </nav>
-        </nav>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Swarmm</span>
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="profile.html">Profile</a>
-        <a class="mdl-navigation__link" href="allEvents.html">All events</a>
-        <a class="mdl-navigation__link" href="createEvent.html">Create new event</a>
-        <a class="mdl-navigation__link" href="login.html">Log in/Register</a>
-      </nav>
-    </div>
-    <main class="mdl-layout__content">
-        <div class="page-content">
-      </main>
-  </div>  
+  <table class="time">
+    <colgroup>
 
+    </colgroup>
+    <tr class="time">
+      <th class="time">Time</th>
+      <th class="time">Monday</th>
+    </tr>
+    <tr class="time">
+      <td class="time" onclick="fill()">12 </td>
+      <td class="time" id="cell12" onclick="fill()"> </td>
+
+    </tr>
+    <tr class="time">
+      <td class="time" onclick="fill()">1 </td>
+      <td class="time" id="cell1" onclick="fill()"> </td>
+    </tr>
+    <tr class="time">
+      <td class="time" onclick="fill()">2</td>
+      <td class="time"id="cell2"  onclick="fill()"> </td>
+    </tr>
+    <tr class="time">
+      <td class="time" onclick="fill()">3 </td>
+      <td class="time"id="cell3"  onclick="fill()"></td>
+    </tr>
+    <tr class="time">
+      <td class="time" onclick="fill()">4 </td>
+      <td class="time"id="cell4"  onclick="fill()"> </td>
+    </tr>
+    <tr class="time">
+      <td class="time"  onclick="fill()">5 </td>
+      <td class="time"id="cell5"  onclick="fill()"></td>
+    </tr>
+  </table>
+
+  <head>
+    <style>
+      table:{
+        border-collapse: collapse;
+      }
+  
+      td,
+      th {
+        border: 1px solid black;
+        padding: 3px;
+        text-align: center;
+      }
+  
+      th{
+        font-weight: bold;
+        background-color: #E6E6E6;
+      }
+    </style>
+  </head>
+  
+  <body>
+  
+  <!--
+    <div id="calendar"></div>
+  
+    <script>
+      function createCalendar(elem, year, month) {
+  
+        let mon = month - 1; // months in JS are 0..11, not 1..12
+        let d = new Date(year, mon);
+  
+        let table = '<table><tr><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th><th>SU</th></tr><tr>';
+  
+        // spaces for the first row
+        // from Monday till the first day of the month
+        // * * * 1  2  3  4
+        for (let i = 0; i < getDay(d); i++) {
+          table += '<td></td>';
+        }
+  
+        // <td> with actual dates
+        while (d.getMonth() == mon) {
+          table += '<td>' + d.getDate() + '</td>';
+  
+          if (getDay(d) % 7 == 6) { // sunday, last day of week - newline
+            table += '</tr><tr>';
+          }
+  
+          d.setDate(d.getDate() + 1);
+        }
+  
+        // add spaces after last days of month for the last row
+        // 29 30 31 * * * *
+        if (getDay(d) != 0) {
+          for (let i = getDay(d); i < 7; i++) {
+            table += '<td></td>';
+          }
+        }
+  
+        // close the table
+        table += '</tr></table>';
+  
+        elem.innerHTML = table;
+      }
+  
+      function getDay(date) { // get day number from 0 (monday) to 6 (sunday)
+        let day = date.getDay();
+        if (day == 0) day = 7; // make Sunday (0) the last day
+        return day - 1;
+      }
+  
+      createCalendar(calendar, 2021, 4);
+    </script>
+  -->
+  <br>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="date" id="date" onchange="date()">
+  <label class="mdl-textfield__label" for="date"></label>
+</div>
+
+<br>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="time" id="starttime" onchange="starttime()">
+  <label class="mdl-textfield__label" for="time"></label>
+</div>
+<br>
+<div class="mdl-textfield mdl-js-textfield">
+  <input class="mdl-textfield__input" type="time" id="endtime" onchange="endtime()">
+  <label class="mdl-textfield__label" for="time"></label>
+</div>
+
+<br>
+<button type="button" class="create" onclick="fill_onclick()">
+ create
+</button>
+
+<script>
+function date() {
+  let dateRef=document.getElementById('date').value;
+  console.log(dateRef);
+  updateDate(dateRef)
+}
+
+function starttime() {
+  let timeRef=document.getElementById('starttime').value;
+  console.log(timeRef);
+  updateStartDate(timeRef)
+}
+
+function endtime() {
+  let endRef=document.getElementById('endtime').value;
+  console.log(endRef);
+  updateEndDate(endRef)
+}
+function fill()
+    {
+    
+        id_info=event.target;
+        id=id_info.id
+        console.log(id.length)
+        if (id.length==5){
+        index=id[4]}
+        else {
+          index=id.slice(4, 6) 
+         
+        }
+
+
+      document.getElementById(`cell${index}`).setAttribute("class", "busy");
+      
+    }
+
+function fill_onclick(){
+  stime=getSTime();
+  etime=getETime();
+  date=getDate();
+  if (stime[0]!= 0)
+  {
+    first_digit=stime[0];
+    console.log(first_digit);
+    end_time=etime[0]
+
+  }
+
+  else
+  {
+    first_digit=stime[1];
+    console.log(first_digit);
+    end_time=etime[1]
+  }
+
+  if (etime[0]!= 0)
+  {
+    end_time=etime[0]
+
+  }
+
+  else
+  {
+    end_time=etime[1]
+  }
+
+  for (i=first_digit; i<=end_time; i++) {
+  document.getElementById(`cell${i}`).setAttribute("class", "busy");
+  }
+
+}
+
+
+</script>
+<script src="share.js"></script>
 </body>
-
 </html>
